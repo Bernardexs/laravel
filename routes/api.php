@@ -25,7 +25,7 @@ Route::group(['middleware' => ["auth:sanctum"]], function () {
     Route::apiResource('puestos',PuestoController::class)->only('index');
     Route::apiResource('salarios',SalarioController::class)->only('index');
     Route::apiResource('empleados',EmpleadoController::class)->only('index','store');
-    Route::apiResource('asistencias',AsistenciaController::class)->only('index','store');
+    Route::apiResource('asistencias',AsistenciaController::class)->only('index','store','destroy');
     Route::controller(UserController::class)->group(function () {
         Route::get('user-profile', 'userProfile');
         Route::post('logout',  'logout');

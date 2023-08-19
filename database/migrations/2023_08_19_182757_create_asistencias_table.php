@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('asistencias', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('hora_entrada');
-            $table->dateTime('hora_salida');
+            $table->date('fecha');
+            $table->time('hora_entrada');
+            $table->time('hora_salida');
             $table->dateTime('horas_trabajadas');
             $table->dateTime('horas_extra');
             $table->foreignId('empleado_id')

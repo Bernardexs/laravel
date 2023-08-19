@@ -12,7 +12,10 @@ class PuestoController extends Controller
      */
     public function index()
     {
-        //
+        $roles=Puesto::all();
+        return response()->json([
+            "puestos"=>$roles
+        ],200);
     }
 
     /**

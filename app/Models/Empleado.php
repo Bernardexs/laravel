@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Empleado extends Model
 {
@@ -29,9 +30,9 @@ class Empleado extends Model
      {
          return $this->BelongsTo(Salario::class);
      }
-     public function Asistencia(): BelongsTo
+     public function Asistencia(): HasMany
      {
-         return $this->BelongsTo(Asistencia::class);
+         return $this->HasMany(Asistencia::class);
      }
 
 }

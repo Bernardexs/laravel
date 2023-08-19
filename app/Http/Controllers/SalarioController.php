@@ -12,7 +12,10 @@ class SalarioController extends Controller
      */
     public function index()
     {
-        //
+        $roles=Salario::all();
+        return response()->json([
+            "salarios"=>$roles
+        ],200);
     }
 
     /**

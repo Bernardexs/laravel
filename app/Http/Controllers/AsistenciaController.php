@@ -11,8 +11,8 @@ class AsistenciaController extends Controller
 {
     private $rules = array(
         'fecha' => 'required|date',
-        'hora_entrada' => 'required|date_format:H:i:s',
-        'hora_salida' => 'required|date_format:H:i:s',
+        'hora_entrada' => 'required|date_format:H:i',
+        'hora_salida' => 'required|date_format:H:i',
         'empleado_id' => 'required',
     );
 
@@ -31,7 +31,7 @@ class AsistenciaController extends Controller
      */
     public function index()
     {
-        $asistencias = Asistencia::with('Puesto', 'Rol', 'Salario', 'Empleado.Usuario.Rol')->get();
+        $asistencias = Asistencia::with('Empleado.Usuario.Rol','Empleado.Puesto','Empleado.Salario')->get();
         return response()->json([
             "asistencias" => $asistencias
         ], 200);

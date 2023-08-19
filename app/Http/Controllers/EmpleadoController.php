@@ -42,7 +42,7 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $empleados = Empleado::all();
+        $empleados = Empleado::with('Usuario')->get();
         return response()->json([
             "empleados" => $empleados
         ], 200);

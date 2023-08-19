@@ -16,8 +16,8 @@ return new class extends Migration
             $table->date('fecha');
             $table->time('hora_entrada');
             $table->time('hora_salida');
-            $table->dateTime('horas_trabajadas');
-            $table->dateTime('horas_extra');
+            $table->string('horas_trabajadas');
+            $table->string('horas_extra');
             $table->foreignId('empleado_id')
             ->constrained('empleados')
             ->cascadeOnDelete()

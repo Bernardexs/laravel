@@ -56,7 +56,7 @@ class UserController extends Controller
     public function userProfile()
     {
         $usuario = Auth::guard('sanctum')->user();
-        $user=User::with('Rol')->where('id','=',$usuario->id)->get();
+        $user=User::with('Rol')->where('id','=',$usuario->id)->first();
         return response()->json([
             "msg" => "Acerca del perfil de usuario",
             "user" => $user,

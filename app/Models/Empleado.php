@@ -19,7 +19,7 @@ class Empleado extends Model
      ];
      public function Usuario(): BelongsTo
      {
-         return $this->BelongsTo(User::class);
+         return $this->BelongsTo(User::class,'user_id');
      }
      public function Puesto(): BelongsTo
      {

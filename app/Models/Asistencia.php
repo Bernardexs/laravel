@@ -19,18 +19,8 @@ class Asistencia extends Model
         "empleado_id"
     ];
 
-    public function Puesto(): BelongsTo
-    {
-        return $this->belongsTo(Puesto::class);
-    }
-    public function Rol(): BelongsTo
-    {
-        return $this->belongsTo(Rol::class);
-    }
-    public function Salario(): BelongsTo
-    {
-        return $this->belongsTo(Salario::class);
-    }
+
+
     public function Empleado(): BelongsTo
     {
         return $this->belongsTo(Empleado::class);

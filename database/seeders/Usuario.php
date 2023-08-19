@@ -21,6 +21,7 @@ class Usuario extends Seeder
         'password'=>bcrypt("admin123"),
         'direccion'=>"via la bonita",
         'cedula'=>"1412534654",
+        'rol_id'=>1,
         ]);
 
     }

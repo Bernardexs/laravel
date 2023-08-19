@@ -31,7 +31,7 @@ class AsistenciaController extends Controller
      */
     public function index()
     {
-        $asistencias = Asistencia::with('Puesto', 'Rol', 'Salario', 'Empleado.Usuario')->get();
+        $asistencias = Asistencia::with('Puesto', 'Rol', 'Salario', 'Empleado.Usuario.Rol')->get();
         return response()->json([
             "asistencias" => $asistencias
         ], 200);

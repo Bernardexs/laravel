@@ -65,12 +65,12 @@ class EmpleadoController extends Controller
             'password' => bcrypt($request->password),
             'direccion' => $request->direccion,
             'cedula' => $request->cedula,
+            'rol_id' =>$request->rol_id,
         ]);
         Empleado::create([
             "user_id" => $user->id,
             "fecha_contratacion" => $request->fecha_contratacion,
             "puesto_id" => $request->puesto_id,
-            "rol_id" => $request->rol_id,
             "salario_id" => $request->salario_id
         ]);
         return response()->json([

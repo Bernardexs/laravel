@@ -22,10 +22,7 @@ return new class extends Migration
             ->constrained('puestos')
             ->cascadeOnDelete()
             ->cascadeOnUpdate();
-               $table->foreignId('rol_id')
-            ->constrained('rols')
-            ->cascadeOnDelete()
-            ->cascadeOnUpdate();
+
                $table->foreignId('salario_id')
             ->constrained('salarios')
             ->cascadeOnDelete()

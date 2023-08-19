@@ -19,7 +19,10 @@ return new class extends Migration
             $table->string('cedula');
             $table->string('email')->unique();
             $table->string('password');
-
+            $table->foreignId('rol_id')
+            ->constrained('rols')
+            ->cascadeOnDelete()
+            ->cascadeOnUpdate();
         });
     }
 

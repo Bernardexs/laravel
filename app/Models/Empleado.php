@@ -15,7 +15,6 @@ class Empleado extends Model
         "user_id",
         "fecha_contratacion",
         "puesto_id",
-        "rol_id",
         "salario_id",
      ];
      public function Usuario(): BelongsTo

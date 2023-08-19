@@ -21,12 +21,12 @@ class Supervisor extends Seeder
         'password'=>bcrypt("pedro123"),
         'direccion'=>"via tosagua",
         'cedula'=>"1412534222",
+        "rol_id"=>2,
         ]);
         Empleado::create([
             "user_id"=>$user->id,
             "fecha_contratacion"=>"2020-11-11",
             "puesto_id"=>1,
-            "rol_id"=>2,
             "salario_id"=>4,
         ]);
     }
